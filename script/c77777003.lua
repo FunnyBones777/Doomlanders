@@ -2,10 +2,9 @@
 --Scripted by FunnyBones777
 local s,id=GetID()
 function s.initial_effect(c)
-	--Must be properly summoned before reviving
-	c:EnableReviveLimit()
 	--Xyz summon procedure
 	Xyz.AddProcedure(c,aux.FilterBoolFunctionEx(Card.IsRace,RACE_ZOMBIE),6,3,nil,nil,Xyz.InfiniteMats)
+	c:EnableReviveLimit()
 	--Gains 1000 ATK for each Xyz material it has
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_SINGLE)
