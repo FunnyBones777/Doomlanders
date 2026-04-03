@@ -25,6 +25,7 @@ function s.flipop(e,tp,eg,ep,ev,re,r,rp)
 		e1:SetCode(EFFECT_CANNOT_BE_BATTLE_TARGET)
 		e1:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
 		e1:SetRange(LOCATION_MZONE)
+		e1:SetValue(aux.imval2)
 		c:RegisterEffect(e1)
 		--Can attack directly
 		local e2=Effect.CreateEffect(c)
