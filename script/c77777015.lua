@@ -35,7 +35,7 @@ function s.initial_effect(c)
 	e4:SetOperation(function(e) Duel.Destroy(e:GetHandler(),REASON_EFFECT) end)
 	c:RegisterEffect(e4)
 end
-function s.spfilter(c,e,tp)
+function s.filter(c,e,tp)
 	if c:IsLocation(LOCATION_EXTRA) and Duel.GetLocationCountFromEx(tp,tp,nil,c)==0 then return false end
 	return c:IsType(TYPE_PENDULUM) and c:IsAttribute(ATTRIBUTE_DARK) and (c:IsLocation(LOCATION_GRAVE) or c:IsFaceup())
 		and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
