@@ -2,7 +2,7 @@
 --Scripted by FunnyBones777
 local s,id=GetID()
 function s.initial_effect(c)
-	--Special Summon 1 "Doomlander" monster from your GY, and if you do, equip it with this card
+	--Special Summon 1 Level 4 or lower DARK monster from your GY, and if you do, equip it with this card
 	local e1=Effect.CreateEffect(c)
 	e1:SetDescription(aux.Stringid(id,0))
 	e1:SetCategory(CATEGORY_SPECIAL_SUMMON+CATEGORY_EQUIP)
@@ -32,9 +32,8 @@ function s.initial_effect(c)
 	e3:SetOperation(s.tdop)
 	c:RegisterEffect(e3)
 end
-s.listed_series={0x666}
 function s.spfilter(c,e,tp)
-	return c:IsSetCard(s.listed_series) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
+	return c:IsLevelBelow(4) and c:IsAttribute(ATTRIBUTE_DARK) and c:IsCanBeSpecialSummoned(e,0,tp,false,false)
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
