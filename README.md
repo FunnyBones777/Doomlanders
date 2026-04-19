@@ -4,6 +4,6 @@
 
 2. Add this line into it:
 
-<img src="https://drive.google.com/file/d/1RLYWudL2lrZkECiqKNwrrjSXCpvnuXus/view" height="180"/>
+<img src="https://github.com/FunnyBones777/Doomlanders/blob/81e7edca1f0698f220eaf16d376f9a7d382b56ed/line.png"/>
 
 3. Place that below the "Project Ignis puzzles" line and you're done!
